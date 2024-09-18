@@ -1,7 +1,7 @@
 resource "hcp_hvn" "secureops_hvn" {
   hvn_id         = "hvn"
   cloud_provider = "aws"
-  region         = "ap-northeast-1"
+  region         = var.aws_region
   cidr_block     = "172.25.16.0/20"
 }
 
