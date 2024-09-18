@@ -10,4 +10,7 @@ resource "hcp_vault_cluster" "secureops_vault_cluster" {
   hvn_id     = hcp_hvn.secureops_hvn.hvn_id
   tier       = "dev"
   public_endpoint = true
+  lifecycle { 
+    prevent_destroy = false 
+  } 
 }
